@@ -138,8 +138,7 @@ export default function App() {
         <div className="bg-red-400 border-2 border-black nb-shadow p-2.5 sm:p-3 flex items-start gap-2 sm:gap-3 text-white">
           <AlertTriangle className="w-4 h-4 sm:w-5 sm:h-5 mt-0.5 flex-shrink-0" />
           <p className="text-xs sm:text-sm font-semibold">
-            Tools ini bersifat demo/edukasi. Penyalahgunaan dapat melanggar ketentuan game dan berakibat banned.
-            Gunakan dengan tanggung jawab.
+            PERINGATAN KERAS: Project web ini murni merupakan pihak ketiga. DILARANG KERAS menyalahgunakan sistem ini atau memperjualbelikannya dalam bentuk jasa komersial apa pun! Web ini dibuat dan disediakan 100% GRATIS. Segala bentuk komersialisasi ilegal akan ditindak tegas
           </p>
         </div>
 

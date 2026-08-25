@@ -10,12 +10,13 @@ interface Props {
 export function AccountPanel({ onConnected, onError }: Props) {
   const [deviceId, setDeviceId] = useState('');
   const [loading, setLoading] = useState(false);
+  // Dipaksa selalu 'device' karena tombol ticket dimatikan fungsinya
   const [mode, setMode] = useState<'device' | 'ticket'>('device');
 
   const handleConnect = async () => {
     const id = deviceId.trim();
     if (!id) {
-      onError('Masukkan Device ID atau Session Ticket dulu.');
+      onError('Masukkan Device ID dulu.');
       return;
     }
     setLoading(true);
@@ -53,6 +54,7 @@ export function AccountPanel({ onConnected, onError }: Props) {
       {/* Mode toggle */}
       <div className="flex gap-2 mb-4">
         <button
+          type="button"
           onClick={() => setMode('device')}
           className={`flex-1 border-2 border-black px-3 py-2 text-xs font-bold uppercase flex items-center justify-center gap-2 transition-all ${
             mode === 'device'
@@ -63,16 +65,16 @@ export function AccountPanel({ onConnected, onError }: Props) {
           <Smartphone className="w-4 h-4" />
           Device ID
         </button>
+        
+        {/* Tombol Session Ticket dimatikan fungsinya & diberi teks BETA miring */}
         <button
-          onClick={() => setMode('ticket')}
-          className={`flex-1 border-2 border-black px-3 py-2 text-xs font-bold uppercase flex items-center justify-center gap-2 transition-all ${
-            mode === 'ticket'
-              ? 'bg-sky-300 nb-shadow-sm translate-x-[1px] translate-y-[1px]'
-              : 'bg-white nb-shadow-sm nb-press hover:bg-neutral-100'
-          }`}
+          type="button"
+          disabled
+          className="flex-1 border-2 border-neutral-400 bg-neutral-100 text-neutral-400 px-3 py-2 text-xs font-bold uppercase flex items-center justify-center gap-2 cursor-not-allowed opacity-60"
         >
           <KeyRound className="w-4 h-4" />
-          Session Ticket
+          <span>Session Ticket</span>
+          <span className="text-[10px] lowercase italic bg-neutral-300 text-neutral-600 px-1.5 py-0.5 rounded ml-1 border border-neutral-400">beta</span>
         </button>
       </div>
 
@@ -83,7 +85,7 @@ export function AccountPanel({ onConnected, onError }: Props) {
             value={deviceId}
             onChange={(e) => setDeviceId(e.target.value)}
             onKeyDown={(e) => e.key === 'Enter' && handleConnect()}
-            placeholder={mode === 'device' ? 'contoh: 84C7A1B2D3E4F5A6' : 'contoh: EF45A92B...panjang'}
+            placeholder="contoh: 84C7A1B2D3E4F5A6"
             className="w-full border-2 border-black px-4 py-3 font-mono text-sm bg-yellow-50 nb-shadow-sm focus:bg-white focus:nb-shadow-none focus:translate-x-[2px] focus:translate-y-[2px] transition-all outline-none"
             disabled={loading}
           />
@@ -112,9 +114,7 @@ export function AccountPanel({ onConnected, onError }: Props) {
         <div className="flex items-start gap-2 text-xs text-neutral-600">
           <User className="w-4 h-4 mt-0.5 flex-shrink-0" />
           <p>
-            {mode === 'device'
-              ? 'Device ID adalah ID unik perangkat Androidmu di game Bussid. Ditemukan di pengaturan game.'
-              : 'Session Ticket (X-Authorization) didapat setelah login pertama. Lebih cepat karena tidak perlu login ulang.'}
+            Device ID adalah ID unik perangkat Androidmu di game Bussid. Ditemukan di pengaturan game.
           </p>
         </div>
       </div>

@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nb-bg: #fef9c3;
+  --nb-ink: #0a0a0a;
+  --nb-paper: #ffffff;
+}
+
+html, body, #root {
+  min-height: 100vh;
+  background-color: var(--nb-bg);
+  color: var(--nb-ink);
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: 'Archivo Black', 'Space Grotesk', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Neo-brutalism shadow utilities — responsive */
+.nb-shadow {
+  box-shadow: 3px 3px 0 0 #0a0a0a;
+}
+.nb-shadow-lg {
+  box-shadow: 4px 4px 0 0 #0a0a0a;
+}
+.nb-shadow-sm {
+  box-shadow: 2px 2px 0 0 #0a0a0a;
+}
+.nb-shadow-none {
+  box-shadow: none;
+}
+@media (min-width: 768px) {
+  .nb-shadow { box-shadow: 4px 4px 0 0 #0a0a0a; }
+  .nb-shadow-lg { box-shadow: 6px 6px 0 0 #0a0a0a; }
+}
+
+/* Hover press effect */
+.nb-press {
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.nb-press:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 0 #0a0a0a;
+}
+.nb-press:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 0 #0a0a0a;
+}
+
+/* Grid background pattern */
+.nb-grid-bg {
+  background-image:
+    linear-gradient(#0a0a0a08 1px, transparent 1px),
+    linear-gradient(90deg, #0a0a0a08 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+@media (min-width: 768px) {
+  .nb-grid-bg { background-size: 32px 32px; }
+}
+
+/* Marquee animation */
+@keyframes nb-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.nb-marquee {
+  animation: nb-marquee 20s linear infinite;
+}
+
+/* Pulse glow for success */
+@keyframes nb-pulse-green {
+  0%, 100% { box-shadow: 4px 4px 0 0 #0a0a0a; }
+  50% { box-shadow: 4px 4px 0 0 #16a34a, 0 0 0 4px #16a34a33; }
+}
+.nb-pulse-green {
+  animation: nb-pulse-green 1.2s ease-in-out;
+}
+
+/* Shake for error */
+@keyframes nb-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+.nb-shake {
+  animation: nb-shake 0.4s ease;
+}
+
+/* Slide in animation */
+@keyframes nb-slide-in {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Fade in animation */
+@keyframes nb-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Pop in animation for modal */
+@keyframes nb-pop-in {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Slide down animation for expandable content */
+@keyframes nb-slide-down {
+  0% { transform: translateY(-10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Safe area for mobile notches */
+.safe-top { padding-top: env(safe-area-inset-top); }
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+/* Prevent horizontal overflow on mobile */
+html, body { overflow-x: hidden; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #fef9c3; }
+::-webkit-scrollbar-thumb { background: #0a0a0a; border: 2px solid #fef9c3; }
+::-webkit-scrollbar-thumb:hover { background: #404040; }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] { -moz-appearance: textfield; }

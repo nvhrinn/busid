@@ -99,8 +99,8 @@ export default function App() {
               <Bus className="w-6 h-6 sm:w-7 sm:h-7 text-yellow-300" />
             </div>
             <div>
-              <h1 className="font-display text-2xl leading-none">BUSSID TOPUP</h1>
-              <p className="text-xs font-semibold uppercase tracking-wider mt-0.5">Gratis • Anti-Spam Queue</p>
+              <h1 className="font-display text-2xl leading-none">TELOLET PAY</h1>
+              <p className="text-xs font-semibold uppercase tracking-wider mt-0.5">Web TopUp Bussid Gratis</p>
             </div>
           </div>
           <div className="hidden sm:flex items-center gap-2 bg-white border-2 border-black px-3 py-1.5 nb-shadow-sm">
@@ -214,7 +214,7 @@ export default function App() {
                   </div>
                   <div className="bg-red-200 border-2 border-black p-2">
                     <AlertTriangle className="w-5 h-5 mx-auto mb-1" />
-                    <p className="text-[9px] font-bold uppercase">Hapus</p>
+                    <p className="text-[9px] font-bold uppercase">Hapus Akun</p>
                   </div>
                 </div>
               </div>
@@ -235,10 +235,10 @@ export default function App() {
       <footer className="border-t-4 border-black bg-white mt-6 sm:mt-8 safe-bottom">
         <div className="max-w-5xl mx-auto px-3 sm:px-4 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs font-semibold">
-            BUSSID TOPUP FREE • React + Supabase Edge
+            TeloletPay
           </p>
           <p className="text-[10px] text-neutral-500 uppercase tracking-wide">
-            Neo Brutalism Edition
+            ©2026 -Copyright By Rlzyy
           </p>
         </div>
       </footer>

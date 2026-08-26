@@ -114,7 +114,7 @@ export function AccountPanel({ onConnected, onError }: Props) {
         <div className="flex items-start gap-2 text-xs text-neutral-600">
           <User className="w-4 h-4 mt-0.5 flex-shrink-0" />
           <p>
-            Device ID adalah ID unik perangkat Androidmu di game Bussid. Ditemukan di pengaturan game.
+            Device ID adalah ID unik perangkat Androidmu yang tertaut di game Bussid. Ditemukan di respon http capture/canary.
           </p>
         </div>
       </div>

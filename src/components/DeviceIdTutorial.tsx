@@ -156,8 +156,7 @@ export function DeviceIdTutorial() {
           <div className="bg-black text-yellow-300 border-2 border-black p-3 flex items-start gap-2">
             <HelpCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
             <p className="text-xs font-semibold">
-              Tips: Device ID juga bisa dilihat dengan dial code *#*#8255#*#* di HP Android, atau
-              cek di Settings {'>'} About Phone {'>'} Device ID.
+              Tips: Sebelum install apk Bussid versi lama harap hapus versi barunya agar berhasil Diinstall.
             </p>
           </div>
         </div>

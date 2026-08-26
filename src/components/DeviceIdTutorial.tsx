@@ -2,17 +2,19 @@ import { useState } from 'react';
 import { Youtube, Download, Smartphone, ChevronDown, ChevronUp, Video, FileText, ExternalLink, HelpCircle } from 'lucide-react';
 
 const TUTORIAL_STEPS = [
-  'Buka aplikasi Bussid di HP Android kamu.',
-  'Masuk ke menu "Pengaturan" atau "Settings" di dalam game.',
-  'Cari bagian "Info Akun" atau "Account Info".',
-  'Device ID biasanya tertera di sana, berupa kode alfanumerik panjang.',
-  'Jika tidak ketemu, gunakan aplikasi "Device ID" dari Play Store untuk melihat ID perangkat.',
-  'Salin kode tersebut dan paste ke kolom input di halaman ini.',
+  'Unduh bahan aplikasi Bussid versi lama & Http Canary.',
+  'Install aplikasi bussid & http canary tersebut.',
+  'Buka aplikasi http canary dan klik tanda panah untuk memulai capture',
+  'Buka aplikasi bussid versi lama dan pastikan sudah login di akunya.',
+  'Jika sudah login di bussid tutup aplikasi dan kembali di aplikasi http canary.',
+  'Pilih icon aplikasi bussid dan opsi request. setelah itu pilih opsi text.',
+  'Nah ditext ini cari endpoint "AndroidDeviceId" dan salin kode id dibelakangnya.',
+  'Device id sudah dapat tinggal kamu paste ke web ini & selesai kamu bisa topup uang bussid sepuasmu!',
 ];
 
 const VIDEO_LINKS = [
   {
-    title: 'Cara Mendapatkan Device ID Bussid (YouTube)',
+    title: 'Cara Mendapatkan Device ID Bussid',
     url: 'https://www.youtube.com/results?search_query=cara+mendapatkan+device+id+bussid',
     icon: Youtube,
     color: 'bg-red-500 text-white',

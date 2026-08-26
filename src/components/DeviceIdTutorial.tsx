@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Youtube, Download, Smartphone, ChevronDown, ChevronUp, Video, FileText, ExternalLink, HelpCircle } from 'lucide-react';
+import { Youtube, Joystick, Download, Smartphone, ChevronDown, ChevronUp, Video, FileText, ExternalLink, HelpCircle } from 'lucide-react';
 
 const TUTORIAL_STEPS = [
   'Unduh bahan aplikasi Bussid versi lama & Http Canary.',
@@ -16,7 +16,7 @@ const VIDEO_LINKS = [
   {
     title: 'Cara Mendapatkan Device ID Bussid',
     url: 'https://www.youtube.com/results?search_query=cara+mendapatkan+device+id+bussid',
-    icon: Youtube,
+    icon: Video,
     color: 'bg-red-500 text-white',
     desc: 'Video tutorial lengkap di YouTube',
   },
@@ -31,16 +31,16 @@ const VIDEO_LINKS = [
 
 const DOWNLOAD_LINKS = [
   {
-    title: 'Device ID (Play Store)',
+    title: 'Http Canary',
     url: 'https://play.google.com/store/search?q=device+id&c=apps',
     icon: Download,
     color: 'bg-green-500 text-white',
     desc: 'Aplikasi untuk melihat Device ID Android',
   },
   {
-    title: 'Bussid di Play Store',
+    title: 'Bussid Versi 3.4.3',
     url: 'https://play.google.com/store/apps/details?id=com.mbs.bussid',
-    icon: Smartphone,
+    icon: Joystick,
     color: 'bg-lime-300',
     desc: 'Download game Bus Simulator Indonesia',
   },
